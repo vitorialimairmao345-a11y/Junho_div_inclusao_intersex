@@ -1,0 +1,120 @@
+
+* {
+margin:0; /*reseta o estilo padrão do navegador*/
+padding:0;
+box-sizing: border-box; /*siginifica que a largura e a altura dos elementos
+ incluem o padding e o border, evitando que eles ultrapassaem o tamanho definido*/
+ }
+
+ body {
+    display: flex; /*ocupar todo espaço disponivel*/
+    flex-direction: column; /*elementos organizados em coluna um abaixo do outro*/
+    min-height: 100vh; /*viewport, mede a altura da tela 100vh= 100%*/
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1
+{
+font-family: "Staatliches", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+}
+
+h1
+{
+font-family: "Staatliches", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+}
+
+h1
+{
+font-family: "Staatliches", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+}
+
+h1
+{
+font-family: "Staatliches", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+}
+
+.slogan
+{
+ font-family: 'Staatliches', 'Impact', sans-serif; /* Use uma fonte sem serifa e bem grossa */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.4; /* Controla o espaçamento vertical entre as faixas */
+  margin: 20px;
+}
+
+/* Container para alinhar e dar espaçamento */
+.destaque-container {
+  font-family: 'Staatliches', 'Impact', sans-serif; /* Use uma fonte sem serifa e bem grossa */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.4; /* Controla o espaçamento vertical entre as faixas */
+  margin: 20px;
+}
+
+/* O segredo do efeito está aqui */
+.linha-destaque {
+  background-color: #000000; /* Fundo preto */
+  color: #FFD700; /* Amarelo ouro (ajuste o tom se preferir mais vibrante) */
+  display: inline; /* Mantém o fundo colado no texto, quebrando por linha */
+  padding: 4px 12px; /* Espaçamento interno para criar a borda preta ao redor do texto */
+  
+  /* Esse comando ajuda a alinhar o fundo perfeitamente se houver quebras automáticas */
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone; 
+}
+
+header{
+background-color: #EFEBE4;
+color:#070606;
+text-align:center;
+padding: 50px; /*Recuo interno*/
+font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+article
+{
+  font-family: 'Staatliches';
+ background-color: #ECCB26;
+color: #070606;
+text-align: rigth;
+padding: 10px;
+font-size: clamp(0.7rem,2vw,1rem); 
+padding: 50px;
+}
+
+.container{ /*Usando a classe container que esta com o nome na classe da DIV*/
+display: flex;
+flex: 1;
+}
+
+main{
+background-color: rgb(34, 32, 100);
+padding: 20px;
+flex: 7;
+color:beige;
+font-size: clamp(1.4rem,2.5vw,1.5rem);
+background: #141E30;  /* fallback for old browsers */
+}
+
+
+footer{
+background-color: #ECCB26;
+color: aliceblue;
+text-align: rigth;
+padding: 10px;
+font-size: clamp(0.7rem,2vw,1rem);
+}
