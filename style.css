@@ -1,120 +1,143 @@
-
+/* Reset básico */
 * {
-margin:0; /*reseta o estilo padrão do navegador*/
-padding:0;
-box-sizing: border-box; /*siginifica que a largura e a altura dos elementos
- incluem o padding e o border, evitando que eles ultrapassaem o tamanho definido*/
- }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
- body {
-    display: flex; /*ocupar todo espaço disponivel*/
-    flex-direction: column; /*elementos organizados em coluna um abaixo do outro*/
-    min-height: 100vh; /*viewport, mede a altura da tela 100vh= 100%*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    background-color: #f5f5f5;
 }
 
-h1
-{
-font-family: "Staatliches", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  text-align: left;
+/* Imagens Responsivas (Banner e Rodapé) */
+.banner, .rodape {
+    width: 100%;
+    height: auto;
 }
 
-h1
-{
-font-family: "Staatliches", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  text-align: left;
+.banner-img, .rodape-img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-h1
-{
-font-family: "Staatliches", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  text-align: left;
+/* Tipografia Geral */
+h1, h2 {
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: 1px;
 }
 
-h1
-{
-font-family: "Staatliches", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  text-align: left;
+h1 {
+    margin-bottom: 30px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
-.slogan
-{
- font-family: 'Staatliches', 'Impact', sans-serif; /* Use uma fonte sem serifa e bem grossa */
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  line-height: 1.4; /* Controla o espaçamento vertical entre as faixas */
-  margin: 20px;
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    margin-bottom: 5px;
 }
 
-/* Container para alinhar e dar espaçamento */
-.destaque-container {
-  font-family: 'Staatliches', 'Impact', sans-serif; /* Use uma fonte sem serifa e bem grossa */
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  line-height: 1.4; /* Controla o espaçamento vertical entre as faixas */
-  margin: 20px;
+/* Destaques de texto com tarja preta */
+.pergunta-destaque {
+    background-color: #070606;
+    color: #EFEBE4;
+    display: inline-block;
+    padding: 5px 15px;
+    margin-bottom: 5px;
 }
 
-/* O segredo do efeito está aqui */
-.linha-destaque {
-  background-color: #000000; /* Fundo preto */
-  color: #FFD700; /* Amarelo ouro (ajuste o tom se preferir mais vibrante) */
-  display: inline; /* Mantém o fundo colado no texto, quebrando por linha */
-  padding: 4px 12px; /* Espaçamento interno para criar a borda preta ao redor do texto */
-  
-  /* Esse comando ajuda a alinhar o fundo perfeitamente se houver quebras automáticas */
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone; 
+.apoio {
+    background-color: #070606;
+    color: #EFEBE4;
+    font-family: "Staatliches", sans-serif;
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
 }
 
-header{
-background-color: #EFEBE4;
-color:#070606;
-text-align:center;
-padding: 50px; /*Recuo interno*/
-font-size: clamp(1.5rem, 4vw, 2.5rem);
+/* Seção Roxa (Main) */
+.conteudo-principal {
+    background-color: #8130AB;
+    padding: 40px 20px;
+    color: beige;
 }
 
-article
-{
-  font-family: 'Staatliches';
- background-color: #ECCB26;
-color: #070606;
-text-align: rigth;
-padding: 10px;
-font-size: clamp(0.7rem,2vw,1rem); 
-padding: 50px;
+.explicacao {
+    display: flex;
+    flex-direction: row; /* Lado a lado no PC */
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
 }
 
-.container{ /*Usando a classe container que esta com o nome na classe da DIV*/
-display: flex;
-flex: 1;
+.textos-bloco {
+    flex: 2;
+    font-family: "Patrick Hand", cursive;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    line-height: 1.4;
 }
 
-main{
-background-color: rgb(34, 32, 100);
-padding: 20px;
-flex: 7;
-color:beige;
-font-size: clamp(1.4rem,2.5vw,1.5rem);
-background: #141E30;  /* fallback for old browsers */
+.textos-bloco p {
+    margin-bottom: 20px;
 }
 
+.textos-bloco p:last-child {
+    margin-bottom: 0;
+}
 
-footer{
-background-color: #ECCB26;
-color: aliceblue;
-text-align: rigth;
-padding: 10px;
-font-size: clamp(0.7rem,2vw,1rem);
+.imagem-bloco {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-ilustrativa {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+}
+
+/* Seção Bege (Apoio) */
+.secao-apoio {
+    background-color: beige;
+    padding: 40px 20px;
+    color: #141E30;
+}
+
+.secao-apoio h2 {
+    margin-top: 20px;
+}
+
+.secao-apoio p {
+    font-family: sans-serif; /* Troque pela de sua preferência */
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-bottom: 15px;
+}
+
+/* ==================== RESPONSIVIDADE (CELULAR) ==================== */
+@media (max-width: 768px) {
+    .explicacao {
+        flex-direction: column; /* Empilha no celular: texto em cima, imagem embaixo */
+        gap: 20px;
+    }
+
+    .imagem-bloco {
+        width: 100%;
+    }
+
+    .imagem-ilustrativa {
+        max-width: 250px; /* Reduz um pouco a imagem no celular */
+    }
+    
+    .conteudo-principal, .secao-apoio {
+        padding: 30px 15px; /* Margens um pouco menores no celular para aproveitar espaço */
+    }
 }
